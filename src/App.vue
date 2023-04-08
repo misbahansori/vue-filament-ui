@@ -135,7 +135,7 @@ const isActive = ref(false);
             <Dropdown>
               <Button>Dropdown</Button>
               <template #content>
-                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem as="a" href="/logout" class="hover:bg-orange-900">Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
