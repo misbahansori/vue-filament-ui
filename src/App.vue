@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Button from "./Components/Button.vue";
-import TextInput from "./Components/TextInput.vue";
+import Button from "./Components/Supports/Button.vue";
+import TextInput from "./Components/Forms/TextInput.vue";
+import TextArea from "./Components/Forms/TextArea.vue";
 
 const company = ref("");
 </script>
@@ -47,6 +48,12 @@ const company = ref("");
           <h2 class="text-lg font-medium text-gray-900">Text Input</h2>
           <div class="flex flex-col gap-3 pt-2">
             <TextInput v-model="company" name="company" required />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-medium text-gray-900">Text Area</h2>
+          <div class="flex flex-col gap-3 pt-2">
+            <TextArea v-model="company" name="company" required />
           </div>
         </div>
       </div>
