@@ -45,6 +45,12 @@ const isActive = ref(false);
             <Button disabled color="warning">Button</Button>
             <Button disabled color="gray">Button</Button>
             <Button disabled color="danger">Button</Button>
+            <Button outlined color="primary">Button</Button>
+            <Button outlined color="secondary">Button</Button>
+            <Button outlined color="success">Button</Button>
+            <Button outlined color="warning">Button</Button>
+            <Button outlined color="gray">Button</Button>
+            <Button outlined color="danger">Button</Button>
           </div>
         </div>
         <div>
