@@ -4,6 +4,7 @@ import Button from "./Components/Supports/Button.vue";
 import TextInput from "./Components/Forms/TextInput.vue";
 import TextArea from "./Components/Forms/TextArea.vue";
 import Checkbox from "./Components/Forms/Checkbox.vue";
+import Toggle from "./Components/Forms/Toggle.vue";
 
 const company = ref("");
 </script>
@@ -62,6 +63,13 @@ const company = ref("");
           <div class="flex flex-col gap-3 pt-2">
             <Checkbox name="company" required />
             <Checkbox inline name="name" required />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-medium text-gray-900">Toggle</h2>
+          <div class="flex flex-col gap-3 pt-2">
+            <Toggle name="asda" required />
+            <Toggle inline name="asda" required />
           </div>
         </div>
       </div>

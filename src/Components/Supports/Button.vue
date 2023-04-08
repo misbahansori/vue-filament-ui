@@ -6,7 +6,7 @@ const props = withDefaults(
     type?: "button" | "submit" | "reset";
     outlined?: boolean;
     disabled?: boolean;
-    tag: string;
+    tag?: string;
   }>(),
   {
     color: "primary",
