@@ -14,7 +14,7 @@ const company = ref("");
 const isActive = ref(false);
 </script>
 <template>
-  <div class="min-h-screen px-4 py-12 sm:px-6">
+  <div class="min-h-screen bg-gray-100 px-4 py-12 sm:px-6">
     <div>
       <h1
         class="flex-1 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl"
@@ -55,6 +55,20 @@ const isActive = ref(false);
             <Button outlined color="warning">Button</Button>
             <Button outlined color="gray">Button</Button>
             <Button outlined color="danger">Button</Button>
+          </div>
+        </div>
+        <div class="flex w-full justify-end">
+          <h2 class="text-lg font-medium text-gray-900">Dropdown</h2>
+          <div class="flex flex-col gap-3 pt-2">
+            <Dropdown>
+              <Button>Dropdown</Button>
+              <template #content>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+              </template>
+            </Dropdown>
           </div>
         </div>
         <div>
@@ -101,7 +115,7 @@ const isActive = ref(false);
             </InputGroup>
           </div>
         </div>
-        <div>
+        <div class="flex w-full justify-end">
           <h2 class="text-lg font-medium text-gray-900">Dropdown</h2>
           <div class="flex flex-col gap-3 pt-2">
             <Dropdown>
@@ -111,7 +125,21 @@ const isActive = ref(false);
                 <DropdownItem>Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
-               </template>
+              </template>
+            </Dropdown>
+          </div>
+        </div>
+        <div class="flex w-full justify-start">
+          <h2 class="text-lg font-medium text-gray-900">Dropdown</h2>
+          <div class="flex flex-col gap-3 pt-2">
+            <Dropdown>
+              <Button>Dropdown</Button>
+              <template #content>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+              </template>
             </Dropdown>
           </div>
         </div>

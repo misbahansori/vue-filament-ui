@@ -6,9 +6,9 @@ dependencies:
     version: 3.2.47
 
 devDependencies:
-  '@floating-ui/vue':
-    specifier: ^0.2.1
-    version: 0.2.1(vue@3.2.47)
+  '@headlessui-float/vue':
+    specifier: ^0.11.0
+    version: 0.11.0(vue@3.2.47)
   '@headlessui/vue':
     specifier: ^1.7.12
     version: 1.7.12(vue@3.2.47)
@@ -300,6 +300,19 @@ packages:
       '@floating-ui/dom': 1.2.6
       vue: 3.2.47
       vue-demi: 0.13.11(vue@3.2.47)
+    dev: true
+
+  /@headlessui-float/vue@0.11.0(vue@3.2.47):
+    resolution: {integrity: sha512-7myI+hZdgnuKVdOIFIKXrgda67YP74PU644kGJ8MGpXjh7ZWa9gF3IaAi0jM3YswUx6vKS4Rm8+bkGhcdWxB/Q==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@floating-ui/core': 1.2.6
+      '@floating-ui/dom': 1.2.6
+      '@floating-ui/vue': 0.2.1(vue@3.2.47)
+      vue: 3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /@headlessui/vue@1.7.12(vue@3.2.47):
