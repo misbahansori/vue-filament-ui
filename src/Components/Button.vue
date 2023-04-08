@@ -11,23 +11,22 @@ const buttonVariants = cva(
     "rounded-lg",
     "border",
     "py-1",
-    "font-medium",
     "outline-none",
     "transition-colors",
     "focus:ring-2",
     "focus:ring-white",
     "focus:ring-inset",
     "focus:ring-offset-2",
-    "shadow",
+    "font-medium",
   ],
   {
     variants: {
       color: {
-        primary: [],
-        success: [],
-        danger: [],
-        warning: [],
-        gray: [],
+        primary: ["shadow"],
+        success: ["shadow"],
+        danger: ["shadow"],
+        warning: ["shadow"],
+        gray: ["shadow"],
         secondary: [],
       },
       size: {
@@ -177,6 +176,7 @@ const buttonVariants = cva(
       },
     ],
     defaultVariants: {
+      color: "primary",
       size: "md",
       outlined: false,
     },

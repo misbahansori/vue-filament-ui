@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Button from "./Components/Supports/Button.vue";
+import Button from "./Components/Button.vue";
 import TextInput from "./Components/Forms/TextInput.vue";
 import TextArea from "./Components/Forms/TextArea.vue";
 import Checkbox from "./Components/Forms/Checkbox.vue";
 import Toggle from "./Components/Forms/Toggle.vue";
 import InputGroup from "./Components/Forms/InputGroup.vue";
 import Label from "./Components/Forms/Label.vue";
+import Dropdown from "./Components/Dropdown.vue";
+import DropdownItem from "./Components/DropdownItem.vue";
 
 const company = ref("");
 const isActive = ref(false);
@@ -97,6 +99,20 @@ const isActive = ref(false);
               <Label for="name" required>Company name</Label>
               <Toggle v-model="isActive" name="asda" required />
             </InputGroup>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-medium text-gray-900">Dropdown</h2>
+          <div class="flex flex-col gap-3 pt-2">
+            <Dropdown>
+              <Button>Dropdown</Button>
+              <template #content>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+                <DropdownItem>Helooasd</DropdownItem>
+               </template>
+            </Dropdown>
           </div>
         </div>
       </div>
