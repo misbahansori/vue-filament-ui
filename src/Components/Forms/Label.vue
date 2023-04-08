@@ -4,16 +4,19 @@ const props = withDefaults(
     required: boolean;
     label?: string;
     for: string;
+    tag?: string;
   }>(),
   {
     required: false,
+    tag: "label",
   }
 );
 </script>
 
 <template>
-  <label
+  <component
     v-if="props.label"
+    :is="props.tag"
     class="filament-forms-field-wrapper-label inline-flex items-center space-x-3 rtl:space-x-reverse"
     :for="props.for"
   >
@@ -23,5 +26,5 @@ const props = withDefaults(
         <sup class="font-medium text-danger-700">*</sup>
       </span>
     </span>
-  </label>
+  </component>
 </template>

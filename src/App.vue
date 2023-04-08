@@ -3,6 +3,7 @@ import { ref } from "vue";
 import Button from "./Components/Supports/Button.vue";
 import TextInput from "./Components/Forms/TextInput.vue";
 import TextArea from "./Components/Forms/TextArea.vue";
+import Checkbox from "./Components/Forms/Checkbox.vue";
 
 const company = ref("");
 </script>
@@ -54,6 +55,13 @@ const company = ref("");
           <h2 class="text-lg font-medium text-gray-900">Text Area</h2>
           <div class="flex flex-col gap-3 pt-2">
             <TextArea v-model="company" name="company" required />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-medium text-gray-900">Checkbox</h2>
+          <div class="flex flex-col gap-3 pt-2">
+            <Checkbox name="company" required />
+            <Checkbox inline name="name" required />
           </div>
         </div>
       </div>
