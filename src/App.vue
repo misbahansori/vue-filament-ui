@@ -89,8 +89,14 @@ const isActive = ref(false);
         <div>
           <h2 class="text-lg font-medium text-gray-900">Toggle</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <Toggle v-model="isActive" name="asda" required />
-            <Toggle v-model="isActive" inline name="asda" required />
+            <InputGroup>
+              <Label for="name" required>Company name</Label>
+              <Toggle v-model="isActive" name="asda" required />
+            </InputGroup>
+            <InputGroup inline>
+              <Label for="name" required>Company name</Label>
+              <Toggle v-model="isActive" name="asda" required />
+            </InputGroup>
           </div>
         </div>
       </div>
