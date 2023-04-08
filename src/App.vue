@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import Button from "./Components/Button.vue";
 import TextInput from "./Components/TextInput.vue";
+
+const company = ref("");
 </script>
 <template>
   <div class="min-h-screen px-4 py-12 sm:px-6">
@@ -20,7 +23,7 @@ import TextInput from "./Components/TextInput.vue";
         <div>
           <h2 class="text-lg font-medium text-gray-900">Text Input</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <TextInput />
+            <TextInput v-model="company" name="company" required />
           </div>
         </div>
       </div>
