@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
 import Label from "./Label.vue";
 import { Switch } from "@headlessui/vue";
-
-const enabled = ref(true);
 
 const props = withDefaults(
   defineProps<{
@@ -18,6 +16,10 @@ const props = withDefaults(
     type: "text",
   }
 );
+
+const emit = defineEmits<{
+  (e: "update:modelValue", value: boolean): void;
+}>();
 </script>
 <template>
   <div class="filament-forms-field-wrapper">
@@ -40,19 +42,20 @@ const props = withDefaults(
           class="filament-forms-text-input-component group flex items-center space-x-2 rtl:space-x-reverse"
         >
           <Switch
-            v-model="enabled"
+            :model-value="modelValue"
+            @update:modelValue="emit('update:modelValue', $event)"
             class="filament-forms-toggle-component relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary-600 outline-none transition-colors duration-200 ease-in-out disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-70"
             :class="{
-              'bg-primary-600': enabled,
-              'bg-gray-200': !enabled,
+              'bg-primary-600': modelValue,
+              'bg-gray-200': !modelValue,
             }"
           >
             <span class="sr-only">Enable notifications</span>
             <span
               class="pointer-events-none relative inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out rtl:-translate-x-5"
               :class="{
-                'translate-x-5 rtl:-translate-x-5': enabled,
-                'translate-x-0': !enabled,
+                'translate-x-5 rtl:-translate-x-5': modelValue,
+                'translate-x-0': !modelValue,
               }"
             />
           </Switch>

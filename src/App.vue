@@ -7,6 +7,7 @@ import Checkbox from "./Components/Forms/Checkbox.vue";
 import Toggle from "./Components/Forms/Toggle.vue";
 
 const company = ref("");
+const isActive = ref(false);
 </script>
 <template>
   <div class="min-h-screen px-4 py-12 sm:px-6">
@@ -68,8 +69,8 @@ const company = ref("");
         <div>
           <h2 class="text-lg font-medium text-gray-900">Toggle</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <Toggle name="asda" required />
-            <Toggle inline name="asda" required />
+            <Toggle v-model="isActive" name="asda" required />
+            <Toggle v-model="isActive" inline name="asda" required />
           </div>
         </div>
       </div>

@@ -14,6 +14,10 @@ const props = withDefaults(
     type: "text",
   }
 );
+
+const emit = defineEmits<{
+  (e: "update:modelValue", value: boolean): void;
+}>();
 </script>
 
 <template>
