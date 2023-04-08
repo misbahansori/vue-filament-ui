@@ -5,6 +5,8 @@ import TextInput from "./Components/Forms/TextInput.vue";
 import TextArea from "./Components/Forms/TextArea.vue";
 import Checkbox from "./Components/Forms/Checkbox.vue";
 import Toggle from "./Components/Forms/Toggle.vue";
+import InputGroup from "./Components/Forms/InputGroup.vue";
+import Label from "./Components/Forms/Label.vue";
 
 const company = ref("");
 const isActive = ref(false);
@@ -56,7 +58,10 @@ const isActive = ref(false);
         <div>
           <h2 class="text-lg font-medium text-gray-900">Text Input</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <TextInput v-model="company" name="company" required />
+            <InputGroup>
+              <Label :for="company" required>Company name</Label>
+              <TextInput v-model="company" name="company" required />
+            </InputGroup>
           </div>
         </div>
         <div>

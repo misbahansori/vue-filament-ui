@@ -1,30 +1,19 @@
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    required: boolean;
-    label?: string;
-    for: string;
-    tag?: string;
-  }>(),
-  {
-    required: false,
-    tag: "label",
-  }
-);
+const props = defineProps<{
+  required?: boolean;
+}>();
 </script>
 
 <template>
-  <component
-    v-if="props.label"
-    :is="props.tag"
+  <label
     class="filament-forms-field-wrapper-label inline-flex items-center space-x-3 rtl:space-x-reverse"
-    :for="props.for"
+    v-bind="$attrs"
   >
     <span class="text-sm font-medium leading-4 text-gray-700">
-      {{ props.label[0].toUpperCase() + props.label.slice(1) }}
+      <slot />
       <span v-if="props.required" class="whitespace-nowrap">
         <sup class="font-medium text-danger-700">*</sup>
       </span>
     </span>
-  </component>
+  </label>
 </template>
