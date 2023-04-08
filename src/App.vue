@@ -67,14 +67,23 @@ const isActive = ref(false);
         <div>
           <h2 class="text-lg font-medium text-gray-900">Text Area</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <TextArea v-model="company" name="company" required />
+            <InputGroup>
+              <Label :for="company" required>Company name</Label>
+              <TextArea v-model="company" name="company" required />
+            </InputGroup>
           </div>
         </div>
         <div>
           <h2 class="text-lg font-medium text-gray-900">Checkbox</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <Checkbox name="company" required />
-            <Checkbox inline name="name" required />
+            <InputGroup>
+              <Label :for="company" required>Company name</Label>
+              <Checkbox name="company" required />
+            </InputGroup>
+            <InputGroup inline>
+              <Checkbox inline name="name" required />
+              <Label for="name" required>Company name</Label>
+            </InputGroup>
           </div>
         </div>
         <div>

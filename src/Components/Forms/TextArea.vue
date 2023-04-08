@@ -20,38 +20,15 @@ const emit = defineEmits<{
 }>();
 </script>
 <template>
-  <div class="filament-forms-field-wrapper">
-    <div class="space-y-2">
-      <div
-        class="flex items-center justify-between space-x-2 rtl:space-x-reverse"
-      >
-        <Label
-          :required="props.required"
-          :label="props.label !== false ? props.label : props.name || ''"
-          :for="props.name"
-        />
-      </div>
-
-      <div
-        class="filament-forms-text-input-component group flex items-center space-x-2 rtl:space-x-reverse"
-      >
-        <div class="flex-1">
-          <textarea
-            :value="props.modelValue"
-            @input="
-              $emit(
-                'update:modelValue',
-                ($event.target as HTMLInputElement).value
-              )
-            "
-            :type="props.type"
-            :name="props.name"
-            :required="props.required"
-            :rows="props.rows"
-            class="block w-full rounded-lg border-gray-300 shadow-sm outline-none transition duration-75 focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 disabled:opacity-70"
-          ></textarea>
-        </div>
-      </div>
-    </div>
-  </div>
+  <textarea
+    :value="props.modelValue"
+    @input="
+      $emit('update:modelValue', ($event.target as HTMLInputElement).value)
+    "
+    :type="props.type"
+    :name="props.name"
+    :required="props.required"
+    :rows="props.rows"
+    class="block w-full rounded-lg border-gray-300 shadow-sm outline-none transition duration-75 focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 disabled:opacity-70"
+  />
 </template>
