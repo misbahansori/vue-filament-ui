@@ -13,9 +13,9 @@ module.exports = {
         warning: colors.amber,
       },
       fontFamily: {
-          sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
+        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
