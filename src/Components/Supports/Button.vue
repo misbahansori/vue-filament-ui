@@ -15,8 +15,10 @@ const buttonVariants = cva(
     "outline-none",
     "transition-colors",
     "focus:ring-2",
+    "focus:ring-white",
     "focus:ring-inset",
     "focus:ring-offset-2",
+    "shadow",
   ],
   {
     variants: {
@@ -35,6 +37,10 @@ const buttonVariants = cva(
       },
       outlined: {
         true: ["border"],
+        false: ["border-transparent", "text-white"],
+      },
+      disabled: {
+        true: ["opacity-70", "cursor-not-allowed", "pointer-events-none"],
         false: [],
       },
     },
@@ -43,8 +49,6 @@ const buttonVariants = cva(
         color: "primary",
         outlined: true,
         class: [
-          "shadow",
-          "focus:ring-white",
           "border-primary-600",
           "text-primary-600",
           "hover:bg-primary-600/20",
@@ -56,8 +60,6 @@ const buttonVariants = cva(
         color: "success",
         outlined: true,
         class: [
-          "shadow",
-          "focus:ring-white",
           "border-success-600",
           "text-success-600",
           "hover:bg-success-600/20",
@@ -69,8 +71,6 @@ const buttonVariants = cva(
         color: "danger",
         outlined: true,
         class: [
-          "shadow",
-          "focus:ring-white",
           "border-danger-600",
           "text-danger-600",
           "hover:bg-danger-600/20",
@@ -82,8 +82,6 @@ const buttonVariants = cva(
         color: "warning",
         outlined: true,
         class: [
-          "shadow",
-          "focus:ring-white",
           "border-warning-600",
           "text-warning-600",
           "hover:bg-warning-600/20",
@@ -95,8 +93,6 @@ const buttonVariants = cva(
         color: "gray",
         outlined: true,
         class: [
-          "shadow",
-          "focus:ring-white",
           "border-gray-600",
           "text-gray-600",
           "hover:bg-gray-600/20",
@@ -108,8 +104,6 @@ const buttonVariants = cva(
         color: "secondary",
         outlined: true,
         class: [
-          "shadow",
-          "focus:ring-white",
           "border-gray-300",
           "text-gray-800",
           "hover:bg-gray-50 focus",
@@ -121,10 +115,6 @@ const buttonVariants = cva(
         color: "primary",
         outlined: false,
         class: [
-          "border-transparent",
-          "text-white",
-          "shadow",
-          "focus:ring-white",
           "bg-primary-600",
           "hover:bg-primary-500",
           "focus:bg-primary-700",
@@ -135,10 +125,6 @@ const buttonVariants = cva(
         color: "success",
         outlined: false,
         class: [
-          "border-transparent",
-          "text-white",
-          "shadow",
-          "focus:ring-white",
           "bg-success-600",
           "hover:bg-success-500",
           "focus:bg-success-700",
@@ -149,10 +135,6 @@ const buttonVariants = cva(
         color: "danger",
         outlined: false,
         class: [
-          "border-transparent",
-          "text-white",
-          "shadow",
-          "focus:ring-white",
           "bg-danger-600",
           "hover:bg-danger-500",
           "focus:bg-danger-700",
@@ -163,10 +145,6 @@ const buttonVariants = cva(
         color: "warning",
         outlined: false,
         class: [
-          "border-transparent",
-          "text-white",
-          "shadow",
-          "focus:ring-white",
           "bg-warning-600",
           "hover:bg-warning-500",
           "focus:bg-warning-700",
@@ -177,10 +155,6 @@ const buttonVariants = cva(
         color: "gray",
         outlined: false,
         class: [
-          "border-transparent",
-          "text-white",
-          "shadow",
-          "focus:ring-white",
           "bg-gray-600",
           "hover:bg-gray-500",
           "focus:bg-gray-700",
@@ -194,8 +168,6 @@ const buttonVariants = cva(
           "border-gray-300",
           "bg-white",
           "text-gray-800",
-          "shadow",
-          "focus:ring-white",
           "hover:bg-gray-50",
           "focus:border-primary-600",
           "focus:bg-primary-50",

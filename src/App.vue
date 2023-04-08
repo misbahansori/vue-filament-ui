@@ -50,7 +50,7 @@ const isActive = ref(false);
             <Button outlined color="success">Button</Button>
             <Button outlined color="warning">Button</Button>
             <Button outlined color="gray">Button</Button>
-            <Button outlined color="danger" class="px-12 py-4">Button</Button>
+            <Button outlined color="danger">Button</Button>
           </div>
         </div>
         <div>
