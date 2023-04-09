@@ -132,10 +132,12 @@ const isActive = ref(false);
         <div class="flex w-full justify-start">
           <h2 class="text-lg font-medium text-gray-900">Dropdown</h2>
           <div class="flex flex-col gap-3 pt-2">
-            <Dropdown>
+            <Dropdown class="shadow-2xl">
               <Button>Dropdown</Button>
               <template #content>
-                <DropdownItem as="a" href="/logout" class="hover:bg-orange-900">Helooasd</DropdownItem>
+                <DropdownItem as="a" href="/logout" class="hover:bg-gray-200">
+                  Helooasd
+                </DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
                 <DropdownItem>Helooasd</DropdownItem>
