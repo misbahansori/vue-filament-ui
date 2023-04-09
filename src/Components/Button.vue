@@ -211,6 +211,7 @@ const props = withDefaults(
     :type="props.type"
     :disabled="props.disabled"
     :class="twMerge(buttonVariants(props), props.class)"
+    v-bind="$attrs"
   >
     <slot />
   </component>

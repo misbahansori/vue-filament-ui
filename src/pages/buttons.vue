@@ -1,0 +1,51 @@
+<script setup lang="ts">
+import Button from "../Components/Button.vue";
+</script>
+<template>
+  <div class="min-h-screen bg-gray-100 px-4 py-12 sm:px-6">
+    <div class="flex flex-col mx-auto max-w-xl">
+      <h1
+        class="flex-1 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl"
+      >
+        Vue Filament UI
+      </h1>
+      <div class="flex flex-col items-start gap-6 pt-8">
+        <div>
+          <h2 class="text-lg font-medium text-gray-900">Buttons</h2>
+          <div class="grid grid-cols-6 gap-2">
+            <Button size="sm" color="primary">Button</Button>
+            <Button size="sm" color="secondary">Button</Button>
+            <Button size="sm" color="success">Button</Button>
+            <Button size="sm" color="warning">Button</Button>
+            <Button size="sm" color="gray">Button</Button>
+            <Button size="sm" color="danger">Button</Button>
+            <Button size="md" color="primary">Button</Button>
+            <Button size="md" color="secondary">Button</Button>
+            <Button size="md" color="success">Button</Button>
+            <Button size="md" color="warning">Button</Button>
+            <Button size="md" color="gray">Button</Button>
+            <Button size="md" color="danger">Button</Button>
+            <Button size="lg" color="primary">Button</Button>
+            <Button size="lg" color="secondary">Button</Button>
+            <Button size="lg" color="success">Button</Button>
+            <Button size="lg" color="warning">Button</Button>
+            <Button size="lg" color="gray">Button</Button>
+            <Button size="lg" color="danger">Button</Button>
+            <Button disabled color="primary">Button</Button>
+            <Button disabled color="secondary">Button</Button>
+            <Button disabled color="success">Button</Button>
+            <Button disabled color="warning">Button</Button>
+            <Button disabled color="gray">Button</Button>
+            <Button disabled color="danger">Button</Button>
+            <Button outlined color="primary">Button</Button>
+            <Button outlined color="secondary">Button</Button>
+            <Button outlined color="success">Button</Button>
+            <Button outlined color="warning">Button</Button>
+            <Button outlined color="gray">Button</Button>
+            <Button outlined color="danger">Button</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
