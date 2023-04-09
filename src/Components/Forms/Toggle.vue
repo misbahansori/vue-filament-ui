@@ -20,33 +20,34 @@ const emit = defineEmits<{
 }>();
 </script>
 <template>
-  <SwitchGroup
-    as="div"
-    class="flex gap-2"
-    :class="{
-      'flex-row items-center': !props.inline,
-      'flex-col': props.inline,
-    }"
-  >
-    <Switch
-      :model-value="modelValue"
-      @update:modelValue="emit('update:modelValue', $event)"
-      class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent outline-none transition-colors duration-150 ease-in-out disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-70"
+  <SwitchGroup>
+    <div
+      class="flex gap-2"
       :class="{
-        'bg-primary-600': modelValue,
-        'bg-gray-200': !modelValue,
+        'flex-row items-center': !props.inline,
+        'flex-col-reverse': props.inline,
       }"
     >
-      <span
-        class="pointer-events-none relative inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-150 ease-in-out"
-        :class="{
-          'translate-x-5 rtl:-translate-x-5': modelValue,
-          'translate-x-0': !modelValue,
-        }"
-      />
-    </Switch>
-    <SwitchLabel :as="Label" :required="props.required">
-      {{ props.label }}
-    </SwitchLabel>
+      <Switch
+        :model-value="props.modelValue"
+        @update:model-value="$emit('update:modelValue', $event)"
+        :class="[
+          props.modelValue ? 'bg-indigo-600' : 'bg-gray-200',
+          'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2',
+        ]"
+      >
+        <span class="sr-only">Use setting</span>
+        <span
+          aria-hidden="true"
+          :class="[
+            props.modelValue ? 'translate-x-5' : 'translate-x-0',
+            'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out',
+          ]"
+        />
+      </Switch>
+      <SwitchLabel :as="Label" :required="props.required">
+        {{ props.label }}
+      </SwitchLabel>
+    </div>
   </SwitchGroup>
 </template>

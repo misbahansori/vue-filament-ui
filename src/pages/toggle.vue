@@ -10,11 +10,16 @@ const isActive = ref(false);
     <h2 class="text-2xl font-semibold text-gray-900">Toggle</h2>
     <div class="flex flex-col gap-4 pt-4">
       <div>
-        <h3 class="text-lg font-medium text-gray-900">Toggle</h3>
+        <h3 class="text-lg font-medium text-gray-900">Normal toggle</h3>
         <div class="pt-2">
-          <Toggle v-model="isActive" name="asda" label="Is Active"> </Toggle>
-
-          <Toggle v-model="isActive" name="asda" required> </Toggle>
+          <Toggle v-model="isActive" label="Is Active"> </Toggle>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-900">Inline toggle</h3>
+        <div class="pt-2">
+          <Toggle v-model="isActive" label="Is Active" inline required>
+          </Toggle>
         </div>
       </div>
     </div>
