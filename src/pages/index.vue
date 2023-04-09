@@ -38,19 +38,6 @@ const isActive = ref(false);
     </div>
   </div>
   <div>
-    <h2 class="text-lg font-medium text-gray-900">Checkbox</h2>
-    <div class="flex flex-col gap-3 pt-2">
-      <InputGroup>
-        <Label :for="company" required>Company name</Label>
-        <Checkbox name="company" required />
-      </InputGroup>
-      <InputGroup inline>
-        <Checkbox inline name="name" required />
-        <Label for="name" required>Company name</Label>
-      </InputGroup>
-    </div>
-  </div>
-  <div>
     <h2 class="text-lg font-medium text-gray-900">Toggle</h2>
     <div class="flex flex-col gap-3 pt-2">
       <Toggle v-model="isActive" name="asda" label="Is Active"> </Toggle>
