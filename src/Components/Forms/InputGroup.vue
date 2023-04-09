@@ -1,16 +1,16 @@
 <script setup lang="ts">
+import { twMerge } from "tailwind-merge";
+
 const props = withDefaults(
   defineProps<{
-    inline?: boolean;
+    class?: string;
   }>(),
-  {
-    inline: false,
-  }
+  {}
 );
 </script>
 
 <template>
-  <div class="flex gap-2" :class="inline ? 'flex-row' : 'flex-col'">
+  <div :class="twMerge('flex gap-2', props.class)">
     <slot />
   </div>
 </template>
