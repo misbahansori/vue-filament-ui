@@ -14,32 +14,47 @@ const company = ref("");
     <div class="flex flex-col gap-4 pt-4">
       <div>
         <h3 class="text-lg font-medium text-gray-900">Normal input</h3>
-        <InputGroup class="pt-4">
-          <Label :for="company" required>Company name</Label>
-          <TextInput v-model="company" name="company" required />
-        </InputGroup>
+        <div class="pt-2">
+          <InputGroup>
+            <Label>Company name</Label>
+            <TextInput v-model="company" name="company" required />
+          </InputGroup>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-900">
+          Normal input with required label
+        </h3>
+        <div class="pt-2">
+          <InputGroup>
+            <Label required>Company name</Label>
+            <TextInput v-model="company" name="company" required />
+          </InputGroup>
+        </div>
       </div>
       <div>
         <h3 class="text-lg font-medium text-gray-900">Input with helper</h3>
-        <InputGroup class="pt-4">
-          <Label :for="company" required>Company name</Label>
-          <TextInput v-model="company" name="company" required />
-          <HelperText>
-            This is the name of your company or organization.
-          </HelperText>
-        </InputGroup>
+        <div class="pt-2">
+          <InputGroup>
+            <Label>Company name</Label>
+            <TextInput v-model="company" name="company" required />
+            <HelperText>
+              This is the name of your company or organization.
+            </HelperText>
+          </InputGroup>
+        </div>
       </div>
       <div>
         <h3 class="text-lg font-medium text-gray-900">
           Input with grid layout
         </h3>
-        <div class="grid gap-6 lg:grid-cols-2">
-          <InputGroup class="pt-4">
-            <Label :for="company" required>Company name</Label>
+        <div class="grid gap-6 pt-2 lg:grid-cols-2">
+          <InputGroup>
+            <Label>Company name</Label>
             <TextInput v-model="company" name="company" required />
           </InputGroup>
-          <InputGroup class="pt-4">
-            <Label :for="company" required>Company name</Label>
+          <InputGroup>
+            <Label>Company name</Label>
             <TextInput v-model="company" name="company" required />
           </InputGroup>
         </div>
