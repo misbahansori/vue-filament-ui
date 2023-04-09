@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Button from "../Components/Button.vue";
+import Button from "../components/Button.vue";
 </script>
 <template>
   <div class="min-h-screen bg-gray-100 px-4 py-12 sm:px-6">

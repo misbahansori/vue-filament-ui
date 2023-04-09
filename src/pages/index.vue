@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Button from "../Components/Button.vue";
-import TextInput from "../Components/Forms/TextInput.vue";
-import TextArea from "../Components/Forms/TextArea.vue";
-import Checkbox from "../Components/Forms/Checkbox.vue";
-import Toggle from "../Components/Forms/Toggle.vue";
-import InputGroup from "../Components/Forms/InputGroup.vue";
-import Label from "../Components/Forms/Label.vue";
-import Dropdown from "../Components/Dropdown.vue";
-import DropdownItem from "../Components/DropdownItem.vue";
+import Button from "../components/Button.vue";
+import TextInput from "../components/forms/TextInput.vue";
+import TextArea from "../components/forms/TextArea.vue";
+import Checkbox from "../components/forms/Checkbox.vue";
+import Toggle from "../components/forms/Toggle.vue";
+import InputGroup from "../components/forms/InputGroup.vue";
+import Label from "../components/forms/Label.vue";
+import Dropdown from "../components/Dropdown.vue";
+import DropdownItem from "../components/DropdownItem.vue";
 
 const company = ref("");
 const isActive = ref(false);
