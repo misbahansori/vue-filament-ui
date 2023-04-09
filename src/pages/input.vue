@@ -29,6 +29,21 @@ const company = ref("");
           </HelperText>
         </InputGroup>
       </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-900">
+          Input with grid layout
+        </h3>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <InputGroup class="pt-4">
+            <Label :for="company" required>Company name</Label>
+            <TextInput v-model="company" name="company" required />
+          </InputGroup>
+          <InputGroup class="pt-4">
+            <Label :for="company" required>Company name</Label>
+            <TextInput v-model="company" name="company" required />
+          </InputGroup>
+        </div>
+      </div>
     </div>
   </div>
 </template>
