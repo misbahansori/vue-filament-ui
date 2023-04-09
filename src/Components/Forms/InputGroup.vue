@@ -10,7 +10,7 @@ const props = withDefaults(
 </script>
 
 <template>
-  <div :class="twMerge('flex gap-2', props.class)">
+  <div :class="twMerge('flex flex-col gap-2', props.class)">
     <slot />
   </div>
 </template>

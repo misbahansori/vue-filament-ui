@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-screen bg-gray-100 px-4 py-12 sm:px-6">
-    <div class="flex flex-col mx-auto max-w-3xl">
+    <div class="mx-auto flex max-w-3xl flex-col">
       <h1
         class="flex-1 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl"
       >
         Vue Filament UI
       </h1>
       <nav class="pt-6">
-        <ul class="flex items-center gap-4 flex-wrap">
+        <ul class="flex flex-wrap items-center gap-4">
           <li>
             <RouterLink to="/button" class="text-blue-600 hover:underline">
               Button

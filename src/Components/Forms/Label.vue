@@ -1,12 +1,20 @@
 <script setup lang="ts">
+import { twMerge } from "tailwind-merge";
+
 const props = defineProps<{
   required?: boolean;
+  class?: string;
 }>();
 </script>
 
 <template>
   <label
-    class="inline-flex items-center space-x-3 text-sm font-medium leading-4 text-gray-700 rtl:space-x-reverse"
+    :class="
+      twMerge(
+        'items-center text-sm font-medium leading-4 text-gray-700',
+        props.class
+      )
+    "
     v-bind="$attrs"
   >
     <slot />

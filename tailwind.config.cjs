@@ -1,5 +1,4 @@
 const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,12 +7,12 @@ module.exports = {
     extend: {
       colors: {
         danger: colors.rose,
-        primary: colors.amber,
+        primary: colors.blue,
         success: colors.green,
         warning: colors.amber,
       },
       fontFamily: {
-        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["DM Sans", 'sans-serif'],
       },
     },
   },
